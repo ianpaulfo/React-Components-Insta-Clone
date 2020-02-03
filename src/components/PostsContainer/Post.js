@@ -20,22 +20,12 @@ const Post = props => {
 
   return (
     <div className="post-border">
-      <PostHeader
-        username={props.post.username}
-        thumbnailUrl={props.post.thumbnailUrl}
-      />
+      <PostHeader username={props.post.username} thumbnailUrl={props.post.thumbnailUrl}/>
       <div className="post-image-wrapper">
-        <img
-          alt="post thumbnail"
-          className="post-image"
-          src={props.post.imageUrl}
-        />
+        <img alt="post thumbnail" className="post-image" src={props.post.imageUrl}/>
       </div>
-      <LikeSection numberOfLikes={numberOfLikes} likeFunc={likePlusOne} />
-      <CommentSection
-        postId={props.post.imageUrl}
-        comments={props.post.comments}
-      />
+      <LikeSection numberOfLikes={numberOfLikes} likeFunc={likePlusOne}/>
+      <CommentSection postId={props.post.imageUrl} comments={props.post.comments}/>
     </div>
   );
 };
